@@ -7,6 +7,7 @@ export default function Cards(props) {
    <div className={style.ananashei}>
       {characters.map((character) => (
           <Card
+          id={character.id}
           key={character.id}
           name={character.name}
           species={character.species}

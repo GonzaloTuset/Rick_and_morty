@@ -1,12 +1,12 @@
 import style from './Card.module.css'
-export default function Card({ name, species, gender, image, }) {
-   const onClose =(name)=>{
-     alert(name)
-   }
+export default function Card({ name, species, gender, image, onClose ,id}) {
+  const handleDelete = () => {
+   onClose(id);
+  }
    return (
       <div className={style.divardo}>
          <div>
-         <button className={style.boton} onClick={onClose}>X</button>
+         <button className={style.boton} onClick={handleDelete}>X</button>
          </div>
          
          <img className={style.img} src={image} alt="" /> 
