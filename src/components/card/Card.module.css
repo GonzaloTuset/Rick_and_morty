@@ -1,0 +1,49 @@
+
+.divardo{
+  background-color:transparent;
+  
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 20px;
+  background-color:greenyellow;
+
+}
+.boton{
+  height: 25px;
+  width: 25px;
+  border-radius: 15px;
+  margin-left: 260px;
+  margin-top: 10px;
+  transition: background-color .3s;
+  background-color:greenyellow;
+  
+}
+.boton:hover{
+  background-color: rgb(194, 57, 57);
+  
+}
+.textos{
+  
+  color:black
+  
+}
+.img{
+  max-width: 270px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  border-radius: 50%;
+  background-size: 100% auto;
+
+}
+.name{
+ display: flex;
+ 
+}
+.h2dos{
+  display: flex;
+  align-items: center;
+  width: 300px;
+  
+  justify-content: space-around;
+}

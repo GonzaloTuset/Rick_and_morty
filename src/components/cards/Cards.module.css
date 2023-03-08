@@ -1,0 +1,7 @@
+.ananashei{
+  background-color:transparent;
+  display: flex;
+  justify-content: center;
+  flex-wrap:wrap;
+  gap:1rem;
+}

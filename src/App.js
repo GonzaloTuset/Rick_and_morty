@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import style from '../src/Appar.module.css'
+
+import Cards from './components/cards/Cards.jsx'
+import SearchBar from './components/searchBar/SearchBar.jsx'
+import characters from './data.js'
+
+function App () {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={style.div}>
+    <header className={style.header}>npm
+      <img className={style.img} src='https://cdn.shopify.com/s/files/1/0346/8063/5529/collections/rick-morty-collection-banner_1400x.jpg?v=1590095280' alt='morit foto'/>
+      
+    </header>
+      <div className={style.search}>
+        <SearchBar
+          onSearch={(characterID) => window.alert(characterID)}
+        />
+      </div>
+      
+      <div>
+        <Cards
+          characters={characters}
+        />
+      </div>
+     
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

@@ -1,0 +1,19 @@
+.input{
+  height: 50px;
+  width: 300px;
+  border-radius: 10px;
+}
+.input:hover{
+  background-color: greenyellow;
+  opacity: 0.9;
+}
+
+.boton{
+  height: 50px;
+ width: 100px;
+ border-radius: 10px;
+}
+.boton:hover{
+  background-color: greenyellow;
+  opacity: 0.9;
+}
