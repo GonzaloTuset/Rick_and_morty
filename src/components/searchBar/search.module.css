@@ -17,3 +17,9 @@
   background-color: greenyellow;
   opacity: 0.9;
 }
+.search{
+  height:189px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

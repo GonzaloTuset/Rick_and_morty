@@ -10,12 +10,7 @@
   width:1000px;
 }
 
-.search{
-  height:189px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+
 .div{
   width: 100%;
   max-height: 100%;

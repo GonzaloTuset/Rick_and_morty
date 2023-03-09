@@ -1,17 +1,20 @@
 import style from '../src/Appar.module.css'
 import { useState } from 'react'
 import Cards from './components/cards/Cards.jsx'
-import SearchBar from './components/searchBar/SearchBar.jsx'
+import { Route, Routes } from 'react-router-dom'
+import  Nav  from './components/nav/Nav.jsx'
+
 
 function App () {
-  const [characters, setCharacters] = useState([])
+  
+   const [characters, setCharacters] = useState([])
   
   function closeCharacter(id) {
    setCharacters((oldChars) => oldChars.filter(c=>c.id !==id))
   }
   function searchCharacters(character) {   
     if(!characters.some((chr)=>{return chr.id === +character})){
-//+string= trasforma a number. Number
+//+string= trasforma a number. Number (lo que quieras pasar a number)
     fetch(`https://rickandmortyapi.com/api/character/${character}`)
        .then((response) => response.json())
        .then((data) => {
@@ -27,24 +30,28 @@ function App () {
   }
   
   return (
+    
     <div className={style.div}>
+     <Nav onSearch={searchCharacters}/>
     <header className={style.header}>
+
       <img className={style.img} src='https://cdn.shopify.com/s/files/1/0346/8063/5529/collections/rick-morty-collection-banner_1400x.jpg?v=1590095280' alt='morit foto'/>
       
     </header>
-      <div className={style.search}>
-        <SearchBar
-          onSearch={searchCharacters}
-        />
-      </div>
+      <Routes>
+        <Route path='/home' element={
+          <Cards
+            characters={characters} onClose={closeCharacter}
+          />
+        }
+          ></Route>
       
-      <div>
-        <Cards
-          characters={characters} onClose={closeCharacter}
-        />
-      </div>
      
+      
+      
+      </Routes>
     </div>
+   
   )
 }
 
