@@ -50,3 +50,8 @@
   
   justify-content: space-around;
 }
+.link{
+  text-decoration: none;
+  list-style: none;
+  color: black;
+}

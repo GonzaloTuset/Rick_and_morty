@@ -3,6 +3,8 @@ import { useState } from 'react'
 import Cards from './components/cards/Cards.jsx'
 import { Route, Routes } from 'react-router-dom'
 import  Nav  from './components/nav/Nav.jsx'
+import About from './components/views/About'
+import Detail from './components/views/Detail'
 
 
 function App () {
@@ -45,7 +47,8 @@ function App () {
           />
         }
           ></Route>
-      
+          <Route path ='/about' element = {<About/>}></Route>
+      <Route path = '/detail/:detailId' element = { <Detail/>}></Route>
      
       
       
