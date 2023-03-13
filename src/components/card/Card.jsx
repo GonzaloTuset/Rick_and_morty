@@ -1,5 +1,5 @@
 import style from './Card.module.css'
-import { Link,NavLink } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 export default function Card({ name, species, gender, image, onClose ,id}) {
   const handleDelete = () => {
    onClose(id);
