@@ -5,12 +5,12 @@ export default function Card({ name, species, gender, image, onClose ,id}) {
    onClose(id);
   }
    return (
-      <NavLink className={style.link}to={`/detail/${id}`}>
       <div className={style.divardo}>
          <div>
          <button className={style.boton} onClick={handleDelete}>X</button>
          </div>
          
+         <NavLink className={style.link}to={`/detail/${id}`}>
          <img className={style.img} src={image} alt="" /> 
         
          <div className={style.name}>
@@ -23,8 +23,8 @@ export default function Card({ name, species, gender, image, onClose ,id}) {
          </div>
          </div>
          
-      </div>
      </NavLink>
+      </div>
       
    );
 }

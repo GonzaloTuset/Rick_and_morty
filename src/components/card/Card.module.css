@@ -41,6 +41,7 @@
 }
 .name{
  display: flex;
+ justify-content: center;
  
 }
 .h2dos{
