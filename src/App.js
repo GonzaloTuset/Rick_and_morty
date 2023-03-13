@@ -5,6 +5,7 @@ import { Route, Routes } from 'react-router-dom'
 import  Nav  from './components/nav/Nav.jsx'
 import About from './components/views/About'
 import Detail from './components/views/Detail'
+import Login from './components/views/Login'
 
 
 function App () {
@@ -41,6 +42,7 @@ function App () {
       
     </header>
       <Routes>
+        <Route path='/' element={<Login/>}/>
         <Route path='/home' element={
           <Cards
             characters={characters} onClose={closeCharacter}
