@@ -6,7 +6,7 @@ import Nav from './components/nav/Nav.jsx'
 import About from './components/views/About'
 import Detail from './components/views/Detail'
 import Login from './components/views/Login'
-
+import Favorites from './components/favorites/favorites'
 
 
 function App() {
@@ -61,7 +61,7 @@ function App() {
       <Routes>
 
         <Route path='/' element={<Login login={login} />} />
-
+        <Route path='/Favorites' element={<Favorites />} />
         <Route path='/home' element={
           <Cards
             characters={characters} onClose={closeCharacter} />
