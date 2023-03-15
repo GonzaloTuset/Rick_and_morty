@@ -1,16 +1,34 @@
 import style from '../src/Appar.module.css'
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 import Cards from './components/cards/Cards.jsx'
-import { Route, Routes, useLocation } from 'react-router-dom'
+import { Route, Routes, useLocation, useNavigate } from 'react-router-dom'
 import Nav from './components/nav/Nav.jsx'
 import About from './components/views/About'
 import Detail from './components/views/Detail'
 import Login from './components/views/Login'
 
 
+
 function App() {
 
   const [characters, setCharacters] = useState([])
+  const { pathname } = useLocation();
+  const [access,setAccess] = useState(false)
+  const navigate = useNavigate();
+
+  const username = "gonza@gmail.com";
+  const password = 'clave123'
+
+
+  const login =(userData) => {
+    if(userData.username === username && userData.password ===password){
+      setAccess(true)
+      navigate('/home')
+    }
+  }
+    useEffect(() => {
+      !access && navigate('/');
+    }, [access, navigate]);
 
   function closeCharacter(id) {
     setCharacters((oldChars) => oldChars.filter(c => c.id !== id))
@@ -31,7 +49,6 @@ function App() {
       alert('No se permiten ID repetidos')
     }
   }
-  const { pathname } = useLocation();
   return (
 
     <div className={style.div}>
@@ -43,7 +60,7 @@ function App() {
       </header>
       <Routes>
 
-        <Route path='/' element={<Login />} />
+        <Route path='/' element={<Login login={login} />} />
 
         <Route path='/home' element={
           <Cards

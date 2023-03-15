@@ -11,7 +11,7 @@ const Detail=()=>{
     axios(`${URL_BASE}/character/${detailId}?key=${KEY}`).then((response) =>
     setCharacter(response.data)
     )
-  },[]);
+  },[detailId]);
   return <div>
     {character.name ?(
       <>
