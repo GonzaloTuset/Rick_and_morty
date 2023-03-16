@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addCharacters, removeCharacters } from '../../redux/reducer';
 
 
-export default function Card({ name, species, gender, image, onClose, id }) {
+export default function Card({ name, species, gender, image, onClose, id}) {
    const dispatch = useDispatch();
    const myFavorites = useSelector(state => state.myFavorites);
    const [isFav, setIsFav] = useState(false);

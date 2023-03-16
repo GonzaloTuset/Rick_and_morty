@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 
 export const ADD_CHARACTERS = 'ADD_CHARACTERS';
+export const FILTER_CARDS = 'FILTER_CARDS'
 
 export const addCharacters = (data) => {
   return {

@@ -8,7 +8,7 @@ export default function Nav(props){
     <Link to='/about'> <h1>Sobre nosotros</h1> </Link>
     <Link  to='/Favorites'> <li>Favorites</li></Link>
   <SearchBar onSearch = {props.onSearch}/>
-    <Random onClick={props.randomSearch} />
+    <Random onSearch={props.onSearch}/>
   </div>
   )
 }
