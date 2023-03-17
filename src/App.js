@@ -57,7 +57,7 @@ function App() {
       {pathname !== '/' && <Nav onSearch={searchCharacters} />}
       <header className={style.header}>
 
-        <img className={style.img} src='https://cdn.shopify.com/s/files/1/0346/8063/5529/collections/rick-morty-collection-banner_1400x.jpg?v=1590095280' alt='morit foto' />
+       <img className={style.img} src='https://cdn.shopify.com/s/files/1/0346/8063/5529/collections/rick-morty-collection-banner_1400x.jpg?v=1590095280' alt='morit foto' />
 
       </header>
       <Routes>

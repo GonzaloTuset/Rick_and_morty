@@ -2,7 +2,7 @@ import style from './Card.module.css'
 import { NavLink } from "react-router-dom"
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addCharacters, removeCharacters } from '../../redux/reducer';
+import { addCharacters, removeCharacters } from '../../redux/actions'
 
 
 export default function Card({ name, species, gender, image, onClose, id}) {
@@ -43,7 +43,7 @@ export default function Card({ name, species, gender, image, onClose, id}) {
             <img className={style.img} src={image} alt="" /> 
         
             <div className={style.name}>
-               <h2 >{name}</h2>
+               <h2 >{id}{name}</h2>
             </div>
             <div className={style.textos}>
                <div className={style.h2dos}>
